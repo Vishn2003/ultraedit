@@ -313,6 +313,105 @@ div li {
     font-size: 20px;
     color: white;
 }
+.progress-section {
+    background-color: #1a1a2e;
+    padding: 50px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.progress-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.progress-subtitle {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.progress-item {
+    background-color: #16213e;
+    border-radius: 10px;
+    padding: 18px 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.progress-percent {
+    color: #00b9d3;
+}
+
+.progress-bar-bg {
+    background-color: #2a2a4a;
+    border-radius: 6px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background-color: #00b9d3;
+    transition: width 0.4s ease;
+}
+
+.progress-bar-partial {
+    background-color: #f0a500;
+}
+
+.progress-bar-pending {
+    background-color: #555577;
+}
+
+.progress-status {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.progress-status.done {
+    color: #2ecc71;
+}
+
+.progress-status.partial {
+    color: #f0a500;
+}
+
+.progress-status.pending {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+    .progress-item {
+        padding: 22px 20px;
+        min-height: 44px;
+    }
+}
+
 .ultra_12{
     display: flex;
     justify-content: center;
