@@ -17,6 +17,7 @@ TaskFlow is a full-featured project and task management frontend that connects t
 
 ## Architecture Decisions
 
+- **Custom mock API server** (`server.cjs`): Wraps json-server v0.x with Express to add `/auth/login`, `/auth/register`, and `/projects/:id/tasks` endpoints that json-server doesn't support natively.
 - **Context + localStorage for auth**: Simple, no external state library needed. JWT stored in localStorage persists across refresh.
 - **useApi hook**: Centralizes auth header injection and error handling. All API calls flow through one place.
 - **Optimistic UI in TaskModal**: Tasks appear immediately on create/edit; reverted if the API call fails.
@@ -43,7 +44,8 @@ npm install
 cp .env.example .env
 
 # 4. Start mock API (in a separate terminal)
-npx json-server --watch db.json --port 4000
+npm run api
+# API runs at http://localhost:4000
 
 # 5. Start dev server
 npm run dev
